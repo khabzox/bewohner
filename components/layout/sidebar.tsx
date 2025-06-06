@@ -103,7 +103,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
   const isItemVisible = (item: any) => {
     if (!item.requiredRole) return true
     if (Array.isArray(item.requiredRole)) {
-      return item.requiredRole.some((role) => hasRole(role))
+      return item.requiredRole.some((role: string) => hasRole(role))
     }
     return hasRole(item.requiredRole)
   }
@@ -111,15 +111,6 @@ export function Sidebar({ open, onClose }: SidebarProps) {
   const SidebarContent = () => (
     <div className="flex flex-col h-full bg-gradient-to-b from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
       <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-        <div className="flex items-center space-x-3">
-          <div className="p-2 bg-blue-600 rounded-xl shadow-lg">
-            <Building2 className="h-6 w-6 text-white" />
-          </div>
-          <div>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white">Wohnanlage</h2>
-            <p className="text-sm text-gray-500 dark:text-gray-400">Dashboard</p>
-          </div>
-        </div>
 
         {/* User Info */}
         <div className="mt-4 p-3 bg-white/50 dark:bg-gray-800/50 rounded-lg">

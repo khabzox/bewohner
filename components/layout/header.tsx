@@ -31,7 +31,7 @@ export function Header({ onMenuClick }: HeaderProps) {
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo and Mobile Menu */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <Button variant="ghost" size="icon" className="md:hidden" onClick={onMenuClick}>
               <Menu className="h-5 w-5" />
             </Button>
